@@ -1,0 +1,45 @@
+DBGESTIONSTOCK
+
+
+create table Productos(
+IdProducto int primary key identity(1,1),
+Precio int,
+FechaCarga datetime default getdate(),
+Categoria varchar(100)
+)
+
+
+
+INSERT INTO [dbo].[Productos]
+( 
+ [Precio], [Categoria]
+)
+VALUES
+( 
+ '10', 'PRODDOS'
+),
+( 
+ '60', 'PRODUNO'
+),
+( 
+ '05', 'PRODDOS'
+),
+( 
+ '05', 'PRODUNO'
+),
+( 
+ '15', 'PRODDOS'
+)
+
+
+
+
+select * from Productos
+
+Comando Entity Framework:
+
+Scaffold-DbContext "Server=(local); DataBase=DBGESTIONSTOCK;Integrated Security=true" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir Models
+
+
+Comando par actualizar React:
+- npm install react@latest  react-dom@latest
